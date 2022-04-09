@@ -28,9 +28,9 @@
 
         # Optionally use extraSpecialArgs
         # to pass through arguments to home.nix
-	extraSpecialArgs = {
-	    emacs-overlay = emacsCommunity.overlay;
-	};
+        extraSpecialArgs = {
+          emacs-overlay = emacsCommunity.overlay;
+        };
       };
     };
 }

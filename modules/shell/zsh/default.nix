@@ -48,7 +48,7 @@ in
           eval "$(${pkgs.direnv}/bin/direnv hook zsh)"
           source ~/.config/zsh/zshrc_extra
           #(cat ~/.cache/wal/sequences &)
-          eval "$(starship init zsh)"
+          #eval "$(starship init zsh)"
         '';
 
         "oh-my-zsh" = {

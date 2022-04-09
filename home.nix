@@ -5,23 +5,34 @@
   imports = [ ./modules ];
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-	 htop fortune
+    htop fortune
   ];
 
   # Let Home Manager install and manage itself.
   programs = {
     home-manager.enable = true;
-    bash.profileExtra = ''
+
+    git = {
+      userName = "Thong Pham";
+      userEmail = "thongpv87@gmail.com";
+    };
+
+    bash.initExtra = ''
        ${lib.fileContents ./shell_profile}
+       eval "$(starship init bash)"
+    '';
+    zsh.initExtra = ''
+      ${lib.fileContents ./shell_profile}
+      eval "$(starship init zsh)"
     '';
   };
 
   module = {
-  	 develop.haskell.enable = false;
-	 develop.holmusk.enable = true;
-	 fonts.enable = true;
-	 shell.enable = true;
-	 emacs.enable = true;
+    develop.haskell.enable = false;
+    develop.holmusk.enable = true;
+    fonts.enable = true;
+    shell.enable = true;
+    emacs.enable = true;
   };
 
   home.sessionVariables = {
