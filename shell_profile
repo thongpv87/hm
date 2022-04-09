@@ -1,0 +1,5 @@
+export NIX_PATH=$HOME/.nix-defexpr/channels:/nix/var/nix/profiles/per-user/root/channels${NIX_PATH:+:$NIX_PATH}
+eval "$(/usr/local/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+alias ibrew='arch -x86_64 /usr/local/homebrew/bin/brew'
+alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
