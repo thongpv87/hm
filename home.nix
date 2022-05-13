@@ -32,7 +32,7 @@
     develop.holmusk.enable = true;
     fonts.enable = true;
     shell.enable = true;
-    emacs.enable = true;
+    #emacs.enable = true;
   };
 
   home.sessionVariables = {
